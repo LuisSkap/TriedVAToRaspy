@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deteccion de Color</title>
+
+	<meta name="viewport" content="width=device-width, minimum-scale=0.1">
+
+	<style type="text/css">
+		#canvas {
+			-moz-transform: scaleX(-1);
+	        -o-transform: scaleX(-1);
+	        -webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
+	        filter: FlipH;
+	        -ms-filter: "FlipH";
+		}
+	</style>
+</head>
+<body>
+    <video id="video" playsinline autoplay style="display:none;"></video>
+    
+	<canvas id="canvas" width="720" height="720"></canvas>
+	<!--<canvas id="resultado" width="720" height="720"></canvas>-->
+
+    <script type="text/javascript" src="webcam.js"></script>
+    <script type="text/javascript" src="Led.js"></script>
+
+    <script type="text/javascript">
+
+    	window.onload = function() {
+    		mostrarCamara();
+    	}
+    </script>
+
+    <div>
+        <h1>Verdes: </h1>
+        <label id="lblCountVerdes">testVerdes</label>
+    </div>
+
+    <div>
+        <h1>Rojos: </h1>
+        <label id="lblCountRojos">testRojos</label>
+    </div>
+</body>
+</html>
